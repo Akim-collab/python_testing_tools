@@ -1,0 +1,51 @@
+test_empty_input (test_one_hot_encoding_unit.TestOneHotEncoder) ... ok
+test_non_string_argument (test_one_hot_encoding_unit.TestOneHotEncoder) ... FAIL
+test_one_word (test_one_hot_encoding_unit.TestOneHotEncoder) ... ok
+test_single_argument (test_one_hot_encoding_unit.TestOneHotEncoder) ... FAIL
+
+======================================================================
+FAIL: test_non_string_argument (test_one_hot_encoding_unit.TestOneHotEncoder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/akimkalenuk/Documents/AAA/Python/python_testing_tools/issue-03/test_one_hot_encoding_unit.py", line 48, in test_non_string_argument
+    self.assertEqual(fit_transform(input_data), expected_output)
+AssertionError: Lists differ: [(1, [0, 0, 1]), (2, [0, 1, 0]), (3, [1, 0, 0])] != [(1, [0, 0, 1]), (2, [1, 0, 0]), (3, [0, 1, 0])]
+
+First differing element 1:
+(2, [0, 1, 0])
+(2, [1, 0, 0])
+
+- [(1, [0, 0, 1]), (2, [0, 1, 0]), (3, [1, 0, 0])]
+?                         ---             ---
+
++ [(1, [0, 0, 1]), (2, [1, 0, 0]), (3, [0, 1, 0])]
+?                       +++             +++
+
+
+======================================================================
+FAIL: test_single_argument (test_one_hot_encoding_unit.TestOneHotEncoder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/akimkalenuk/Documents/AAA/Python/python_testing_tools/issue-03/test_one_hot_encoding_unit.py", line 39, in test_single_argument
+    self.assertEqual(fit_transform(input_data), expected_output)
+AssertionError: Lists differ: [('abcde', [1])] != [('a', [0, 0, 0, 0, 0]), ('b', [1, 0, 0, 0, 0[70 chars] 0])]
+
+First differing element 0:
+('abcde', [1])
+('a', [0, 0, 0, 0, 0])
+
+Second list contains 4 additional elements.
+First extra element 1:
+('b', [1, 0, 0, 0, 0])
+
+- [('abcde', [1])]
++ [('a', [0, 0, 0, 0, 0]),
++  ('b', [1, 0, 0, 0, 0]),
++  ('c', [0, 1, 0, 0, 0]),
++  ('d', [1, 1, 0, 0, 0]),
++  ('e', [0, 0, 1, 0, 0])]
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=2)

@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.8.5, pytest-7.1.3, pluggy-0.13.1 -- /Users/akimkalenuk/opt/anaconda3/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/akimkalenuk/Documents/AAA/Python/python_testing_tools/issue-01
+plugins: libtmux-0.23.2
+collecting ... collected 0 items
+
+============================ no tests ran in 0.06s =============================
